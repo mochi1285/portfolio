@@ -16,10 +16,11 @@
     <!-- この部分レスポンシブ対応必須 -->
     <dev class="textcenter"><h2>自己紹介</h2></dev>
     <section class="mainyokonarabi">
-      <button class="modal-open" data-modal="modal1">➀ 筆者について <img class="navsize" src="image/treasure_silver.png" alt="筆者についての文字の隣に宝箱のアイコン"> </button>
-      <button class="modal-open" data-modal="modal2">➁ 使用言語 <img class="navsize" src="image/book_02_brown.png" alt="使用言語の文字の隣に本のアイコン"></button>
-      <button class="modal-open" data-modal="modal3">➂ 休日の過ごし方 <img class="navsize" src="image/kirakira_01_red.png" alt="休日の過ごし方の文字の隣にキラキラのアイコン"></button>
-      <button class="modal-open" data-modal="modal4">➃ 学生時代の部活動 <img class="navsize" src="image/hammer.png" alt="学生時代の部活動の文字の隣にハンマーのアイコン"></button>
+      <!-- 今後アイコンを画像変更する仕様に戻す場合クラス名をIDに変えID名も変更する -->
+      <button class="modal-open modal1" data-modal="modal1">➀ 筆者について</button>
+      <button class="modal-open modal2" data-modal="modal2">➁ 使用言語</button>
+      <button class="modal-open modal3" data-modal="modal3">➂ 休日の過ごし方</button>
+      <button class="modal-open modal4" data-modal="modal4">➃ 学生時代の部活動 </button>
     </section>
 
 <section class="maincenter">
@@ -86,17 +87,11 @@
   そのため、引き続きchatGPTに解決策についてアドバイスを聞くことで少しづつ進めています。
   </div>
 </section>
-<!-- <p>最近では、画像や音楽高度な文章を生成するAIなど様々な生成AIが作成されています。 
-  その中でも、特に注目しているコンテンツはAItuberです。
-  AItuberとは、配信自体を全部AIが行っているもののことを指します。
-  雑談配信でコメントに対する回答を画面上に映したり、
-  ゲームのプレイもAIが操作していく配信がすでにあります。
-  皆さんももしかしたらなじみのあるAIは、チャットアプリLineのチャットBOT「りんな」がAItuberとして先駆けとなっています。
-  私が、よくラジオ代わりに聞いているのはAItuberの紡ネン（ねんねん）です。
-  また、生成AIは現代のスマートフォンのように、生活の一部として誰でも当たり前に使うようになる時代が来ると思ってます。
-  そのため、私自身もまずchatGPTを使いこなせるように自己学習時活用しています。
-</p>
--->
+
+<div class="textcenter"><h2>アニメーション</h2></div>
+<button id="dogclick">犬が活発になるボタン<img id="buttonleftdog" src="image/dog_pomeranian_white.png" width="20px" height="20px" alt="犬が活発になるボタンの横に配置された白色のポメラニアンの画像"></button>
+
+
 
       <section class="mainyokonarabi">
       <div class="mainmodal">
@@ -111,7 +106,7 @@
 
       
       <div class="mainmodal">
-        <div class="textcenter">  <div id="modal2" class="modal">
+        <div class="textcenter"><div id="modal2" class="modal">
         <div class="modal-content">
           <!-- 閉じるボタン -->
           <span class="modal-close" aria-label="閉じる">&times;</span>
@@ -150,15 +145,102 @@
       </div>
 
       </section>
-      <div class="dog"><img src="image/dog_pomeranian_white.png" width="100px" height="100px"></div>
+      <div id="dog"><img id="dogsize" src="image/dog_pomeranian_white.png" width="100px" height="100px"></div>
       <!-- <section class="js-hover-box">t</section> -->
-    
+      <div id="circle"></div>
+
   </main>
 </div>
 <footer>
   <p>&copy; 2024 私の自己紹介ページ</p>
   <p>画像引用元: <a href="https://dot-illust.net/maptile_sogen_01/" target="_ white">かわいいドット絵フリー素材サイト</a></p>
 </footer>
+
+<script>
+  "use strict";
+  const circle = document.getElementById("circle");
+  const dogclick = document.getElementById("dogclick");
+  const dog = document.getElementById("dog");
+ 
+  let randomDecimal; 
+  let randomDecimalimg;
+  let buttonleftdog = document.getElementById("buttonleftdog");
+  let position = 600;
+  dogclick.addEventListener("click", () => {
+  function dogrun() {
+
+    // 位置を現在位置の場所(px)の値をランダムに変更する
+    randomDecimal = Math.random() * 700;
+    position += randomDecimal; 
+    dog.style.left = position + "px";
+    
+    position=0;
+
+    randomDecimal = Math.random() * 700;
+    position += randomDecimal; 
+    dog.style.right = position + "px";
+
+    position=0;
+
+    randomDecimal = Math.random() * 700;
+    position += randomDecimal; 
+    dog.style.bottom = position + "px";
+    
+    position=0;
+
+    randomDecimal = Math.random() * 700;
+    position += randomDecimal; 
+    dog.style.top = position + "px";
+
+    if (position <= 1000) {
+
+
+      requestAnimationFrame(dogrun); // 再帰的に呼び出し
+    }
+  }
+
+  dogrun(); // アニメーションを開始
+});
+</script>
+
+
+
+<script>
+  "use strict";
+function dogimg() {
+
+  // 位置を現在位置の場所(px)の値をランダムに変更する
+  randomDecimalimg = Math.random() * 30;
+  position += randomDecimal; 
+  buttonleftdog.style.left = position + "px";
+  
+  position=0;
+  
+  randomDecimalimg = Math.random() * 30;
+  position += randomDecimal; 
+  buttonleftdog.style.right = position + "px";
+  
+  position=0;
+  
+  randomDecimalimg = Math.random() * 30;
+  position += randomDecimal; 
+  buttonleftdog.style.bottom = position + "px";
+  
+  position=0;
+  
+  randomDecimalimg = Math.random() * 30;
+  position += randomDecimal; 
+  buttonleftdog.style.top = position + "px";
+  
+  if (position <= 1000) {
+    requestAnimationFrame(dogrun); // 再帰的に呼び出し
+  }
+  
+  }
+  
+  dogimg(); // アニメーションを開始
+</script>  
+
 <script>
 "use strict";
 // モーダルを開く
@@ -198,20 +280,7 @@ window.addEventListener('click', event => {
             });
         });
         const hoverBox = document.querySelector('.js-hover-box');
-//以下実装予定
-// 初期画像とマウスオーバー時の画像を設定
-//const defaultImage = 'image/dog_pomeranian_chocolate.png';
-//const hoverImage = 'image/dog_pomeranian_white.png';
 
-// マウスオーバー時の処理
-//hoverBox.addEventListener('mouseover', () => {
-  //  hoverBox.style.backgroundImage = `url(${defaultImage})`;
-//});
-
-// マウスアウト時の処理
-//hoverBox.addEventListener('mouseout', () => {
-  //hoverBox.style.backgroundImage = `url(${hoverImage})`;
-//});
 
 </script>
 </body>
