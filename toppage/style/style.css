@@ -9,7 +9,7 @@ body {
   }
 
   header {
-    background-color: #4CAF50;
+    background-image: url(../image/maptile_sogen_01.png);
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -66,7 +66,7 @@ body {
 .modal {
   display: none; /* 非表示 */
   position: fixed;
-  z-index: 1000;
+ /*z-index: 1000; */
   left: 0;
   top: 0;
   width: 100%;
@@ -87,7 +87,37 @@ body {
   max-width: 90%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+.modal1 {
+  background-image: url(../image/treasure_silver.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 36px;
+}
+.modal2 {
+  background-image: url(../image/book_02_brown.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 36px;
+}
+.modal3 {
+  background-image: url(../image/kirakira_01_red.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 36px;
+}
+.modal4 {
+  background-image: url(../image/hammer.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 36px;
+}
+.modal1:hover, .modal:visited {
+  background-image: url(../image/treasure_silver_open.png);
+}
 /* 閉じるボタン */
 .modal-close {
   position: absolute;
@@ -133,7 +163,13 @@ body {
 .modal-open{
   font-size: 16px;
 }
-.dog{
+#modal-openbox{
+  font-size: 16px;
+}
+#modal-openkira{
+  font-size: 16px;
+}
+#dog{
   position: absolute;
   left: 90%;
   bottom: 10%;
@@ -148,3 +184,13 @@ body {
   transition: background-color 0.3s ease;
 }
 */
+
+
+@media (max-width: 768px) {
+  .mainyokonarabi{
+    display: block;
+  }
+  #dog{
+    display: none;
+      }
+}
