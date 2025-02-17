@@ -16,7 +16,7 @@
     <!-- この部分レスポンシブ対応必須 -->
     <dev class="textcenter"><h2>自己紹介</h2></dev>
     <section class="mainyokonarabi">
-      <!-- 今後アイコンを画像変更する仕様に戻す場合クラス名をIDに変えID名も変更する -->
+ 
       <button class="modal-open modal1" data-modal="modal1">➀ 筆者について</button>
       <button class="modal-open modal2" data-modal="modal2">➁ 使用言語</button>
       <button class="modal-open modal3" data-modal="modal3">➂ 休日の過ごし方</button>
@@ -24,31 +24,35 @@
     </section>
 
 <section class="maincenter">
-    <dev class="textcenter"><h2>課題制作</h2></dev>
-    <button class="accordion">制作演習１について　　　　　　　　　　▼</button>
+    <div class="textcenter"><h2>作品制作</h2></div>
+    <button class="accordion">作品演習１について　　　　　　　　　　▼</button>
     <div class="panel">
         <section class="seisaku">制作時間ー３０時間</section>
         <div>架空の施工業者の事業内容について紹介するページを作成しました。</div>
         <div><a href="kadai1/index.html">施工業者</a><br>HTML・CSSでFigmaのデザインカンプを見ながら</div>
         <div>なるべくカンプどうりになるようページの調整を行いました。</div>
+        <p><a href=https://github.com/mochi1285/portfolio/tree/main/toppage/kadai1>Githabリンク</a></p>
     </div>
 
 
-    <button class="accordion">制作演習２について　　　　　　　　　　▼</button>
+    <button class="accordion" >作品演習２について　　　　　　　　　　▼</button>
     <div class="panel">
     <section class="seisaku">制作時間ー３５時間×３人</section>
     <div>架空の観光サイトをチームで作成しました。私が担当したのは、台中で同じくデザインカンプを見ながら作成しました。</div>
     <div class="syokai"><a href="kadai2/taichu/index.html">台中紹介ページ</a></div>
+    <p><a href=https://github.com/mochi1285/portfolio/tree/main/toppage/kadai2/taichu>Githabリンク</a></p>
     <div>チーム各担当ページ内で共通の機能があるところは、手分けして実装することで作業負担を減らしました。</div>
     </div>
 
-    <button class="accordion">制作課題演習以外で作成したもの　　　　▼</button>
+    <button class="accordion">作品演習以外で作成したもの　　　　　　▼</button>
     <div class="panel">
       <section class="seisaku">制作時間ー１２時間</section>
-      <p><a href="sonota_seisaku/put_cards.html">ロイヤルストレートフラッシュ</a>についての説明とテーブルをHTML/CSSを使って表現しました。</p>
+      <p><a href="sonota_seisaku/put_cards.html">ロイヤルストレートフラッシュ</a>についての説明とテーブルをHTML/CSSを使って表現しました。<br>
+        <a href=https://github.com/mochi1285/portfolio/tree/main/toppage/sonota_seisaku>Githabリンク</a></p>
     
       <section class="seisaku">制作時間ー２０時間</section> 
-    <div><a href="stopwatch/stop.html">ストップウォッチ</a></div><p>授業では、スタートとリセットしかできないストップウォッチを改良し<br>途中からリスタート出来るようストップウォッチを改良しました。</p>  
+    <div><a href="stopwatch/stop.html">ストップウォッチ</a></div><p>授業では、スタートとリセットしかできないストップウォッチを改良し<br>途中からリスタート出来るようストップウォッチを改良しました。<br>
+      <a href=https://github.com/mochi1285/portfolio/tree/main/toppage/stopwatch>Githabリンク</a></p>  
     
     
   </div>
@@ -86,11 +90,31 @@
   しかし、微調整や衣装作成が難しいです。<br>
   そのため、引き続きchatGPTに解決策についてアドバイスを聞くことで少しづつ進めています。
   </div>
+
+  <button class="accordion">・その他架空のオリジナルホームページ　▼</button>
+  <div class="panel">
+  匂いまで感じることができる<a href="VR4D/vr4d.html">VR4Dゴーグルの架空の商品紹介サイト</a>です。<br>
+  見た目は、ガスマスクとVRゴーグルが合わさった物々しい見た目をしています。<br>
+  もし、プレイ中自宅で急に毒ガスが発生しても安心してプレイし続けることができると思います。<br>
+  制作時間５時間<br><br>
+
+  世界最高峰のセキュリティを兼ね備えた<a href="jork/index.html">情報サイトです。</a>というのは冗談でサイト内の中の情報はすべて嘘です。<br>
+  選択肢によって若干のホラー演出があります。<br>
+  制作時間６時間<br><br>
+
+  思わず、ボタンを連打したくなる<a href="pachi/index.html">パチンコの確変演出風のサイト</a>です。<br>
+  現在は演出がシンプルなため今後アップデートする予定です。<br>
+  制作時間５時間
+
+
+
+
+  </div>
 </section>
 
 <div class="textcenter"><h2>アニメーション</h2></div>
-<button id="dogclick">犬が活発になるボタン<img id="buttonleftdog" src="image/dog_pomeranian_white.png" width="20px" height="20px" alt="犬が活発になるボタンの横に配置された白色のポメラニアンの画像"></button>
-
+<button id="dogclick">押してみて</button>
+<button id="stop">停止ボタン</button>
 
 
       <section class="mainyokonarabi">
@@ -99,7 +123,7 @@
           <div class="modal-content">
             <span class="modal-close">&times;</span>
             <h2>➀ 筆者について</h2>
-            <p>田村勇人 1998年2月4日生まれ 26歳 多趣味でいろんな事に興味があります。</p>
+            <p>田村勇人 1998年2月4日生まれ 27歳 多趣味でいろんな事に興味があります。</p>
           </div>
         </div>
       </div>
@@ -112,7 +136,7 @@
           <span class="modal-close" aria-label="閉じる">&times;</span>
           <h2>➁ 使用言語</h2>
           HTML・CSS・JavaScriptを現在主に学習しています。コードを書くときは、<br>Visual Studio Codeを使っています。
-          また、機能を実装するうえでどうしてもわからないところがある時は、<br>ChatGTPに聞いてヒントをもらっています。
+          また、機能を実装するうえでどうしてもわからないところがある時は、<br>ChatGPTに聞いてヒントをもらっています。
           私のGithabのリンクは<a href="https://github.com/mochi1285">こちら</a>になります。<br>
            今後自作でプログラミングする際成果物を追加で載せる予定です。ぜひご覧ください。</p>
         </div>
@@ -153,135 +177,10 @@
 </div>
 <footer>
   <p>&copy; 2024 私の自己紹介ページ</p>
-  <p>画像引用元: <a href="https://dot-illust.net/maptile_sogen_01/" target="_ white">かわいいドット絵フリー素材サイト</a></p>
+  <p>画像引用元: <a href="https://dot-illust.net/maptile_sogen_01/" target="_white">かわいいドット絵フリー素材サイト</a></p>
 </footer>
 
-<script>
-  "use strict";
-  const circle = document.getElementById("circle");
-  const dogclick = document.getElementById("dogclick");
-  const dog = document.getElementById("dog");
- 
-  let randomDecimal; 
-  let randomDecimalimg;
-  let buttonleftdog = document.getElementById("buttonleftdog");
-  let position = 600;
-  dogclick.addEventListener("click", () => {
-  function dogrun() {
-
-    // 位置を現在位置の場所(px)の値をランダムに変更する
-    randomDecimal = Math.random() * 700;
-    position += randomDecimal; 
-    dog.style.left = position + "px";
-    
-    position=0;
-
-    randomDecimal = Math.random() * 700;
-    position += randomDecimal; 
-    dog.style.right = position + "px";
-
-    position=0;
-
-    randomDecimal = Math.random() * 700;
-    position += randomDecimal; 
-    dog.style.bottom = position + "px";
-    
-    position=0;
-
-    randomDecimal = Math.random() * 700;
-    position += randomDecimal; 
-    dog.style.top = position + "px";
-
-    if (position <= 1000) {
-
-
-      requestAnimationFrame(dogrun); // 再帰的に呼び出し
-    }
-  }
-
-  dogrun(); // アニメーションを開始
-});
-</script>
-
-
-
-<script>
-  "use strict";
-function dogimg() {
-
-  // 位置を現在位置の場所(px)の値をランダムに変更する
-  randomDecimalimg = Math.random() * 30;
-  position += randomDecimal; 
-  buttonleftdog.style.left = position + "px";
-  
-  position=0;
-  
-  randomDecimalimg = Math.random() * 30;
-  position += randomDecimal; 
-  buttonleftdog.style.right = position + "px";
-  
-  position=0;
-  
-  randomDecimalimg = Math.random() * 30;
-  position += randomDecimal; 
-  buttonleftdog.style.bottom = position + "px";
-  
-  position=0;
-  
-  randomDecimalimg = Math.random() * 30;
-  position += randomDecimal; 
-  buttonleftdog.style.top = position + "px";
-  
-  if (position <= 1000) {
-    requestAnimationFrame(dogrun); // 再帰的に呼び出し
-  }
-  
-  }
-  
-  dogimg(); // アニメーションを開始
-</script>  
-
-<script>
-"use strict";
-// モーダルを開く
-document.querySelectorAll('.modal-open').forEach(button => {
-  button.addEventListener('click', () => {
-    const modalId = button.getAttribute('data-modal'); // ボタンのデータ属性からモーダルIDを取得
-    document.getElementById(modalId).style.display = 'block';
-  });
-});
-
-// モーダルを閉じる
-document.querySelectorAll('.modal-close').forEach(closeButton => {
-  closeButton.addEventListener('click', () => {
-    closeButton.closest('.modal').style.display = 'none';
-  });
-});
-
-// モーダルの外側をクリックしたときに閉じる
-window.addEventListener('click', event => {
-  document.querySelectorAll('.modal').forEach(modal => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-});
-
-        // アコーディオンボタンを全て取得
-        const accordions = document.querySelectorAll('.accordion');
-
-        accordions.forEach(button => {
-            button.addEventListener('click', () => {
-                // クリックされたボタンの次の要素(.panel)を取得
-                const panel = button.nextElementSibling;
-
-                // パネルをトグル表示
-                panel.classList.toggle('active');
-            });
-        });
-        const hoverBox = document.querySelector('.js-hover-box');
-
-
-</script>
+<script src="javascript/scriptdog.js"></script>
+<script src="javascript/scriptmodal.js"></script>
 </body>
 </html>

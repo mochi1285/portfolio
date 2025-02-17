@@ -1,0 +1,100 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+nav {
+  text-align: center;
+}
+
+.nav-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.nav-menu li a:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* セクションのスタイル */
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.705);
+}
+
+h1, h2 {
+  color: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.content {
+  padding: 50px;
+  text-align: center;
+}
+
+.fade-in-image {
+  opacity: 0;
+  transform: translateY(50px); /* 画面の下から浮かび上がるように */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.kyokou{
+  text-align: center;
+  background-image: url(images/hikari.jpg);
+  background-position: center;
+  z-index: 100;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  z-index: 30;
+  background-repeat:no-repeat;
+  height: 700px;
+}
+
+/* スクロールして画像が表示される位置を設定 */
+@media screen and (max-width: 768px) {
+  .fade-in-image {
+      transition: opacity 1s ease, transform 1s ease;
+  }
+}
