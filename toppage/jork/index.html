@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>世界最高峰のセキュリティを兼ね備えたジョークホームページ</title>
+</head>
+
+    <body>
+
+     
+     
+        <div class="popup" id="popupMessage">
+            <p>このページは最高レベルのセキュリティ対策が施されています。アクセスには慎重に行動してください。</p>
+            <button onclick="closePopup()">了承</button>
+        </div>
+        <div class="popup" id="popupMessage2">
+            <p>了承ボタンが押されたことを確認したため処理を開始します。</p>
+            <button onclick="cansel()">キャンセル</button>
+            <button onclick="cansel2()">了承</button>
+        </div>
+
+<script src="btn.js" defer> </script>
+<div id="imageContainer"></div>
+<div id="output"></div>
+
+    <script>
+function cansel(){
+    document.getElementById("imageContainer").innerHTML = '<img src="eyes.jpg">';
+    
+    setTimeout(() => {
+        document.getElementById("imageContainer").style.display = 'none';
+        document.getElementById("popupMessage2").style.display = 'none';
+    const text = "キャンセルできません".repeat(250);
+    let index = 0; // 現在の文字のインデックス
+    const outputDiv = document.getElementById("output");
+    
+    // setIntervalを使って1文字ずつ表示
+    const textInterval = setInterval(() => {
+        outputDiv.innerHTML += text[index]; // 文字を追加
+        index++; // 次の文字に進む
+        if (index  < text.length) {
+            outputDiv.innerHTML += text[index]; // 1文字ずつ追加
+            index++;
+        } else {
+                clearInterval(textInterval); // すべて表示したら停止
+            }
+    }, 5); // 5ミリ秒ごとに1文字表示
+},2000);//2秒後に処理開始
+setTimeout(() => {cansel2()},10000);
+}
+
+
+ </script>
+ <script src="test.js" defer></script>
+
+
+
+<div id="flag">これより先に進むには、パスワード、顔認証、指紋認証、そして秘密の質問に答える必要があります。
+<p>パスワード</p>
+<input type="text" id="userInput" placeholder="ここに入力">
+
+<p>あなたが思う豊臣秀吉の顔の点数</p>
+<input type="text" id="userInput" placeholder="ここに入力">
+
+<p>あなたの指紋の形状をひとことで</p>
+<input type="text" id="userInput" placeholder="ここに入力">
+
+<p>徳川埋蔵金のありか</p>
+<input type="text" id="userInput" placeholder="ここに入力">
+<button onclick="sent()">送信</button>
+<script>
+    function sent(){
+        document.getElementById('flag').style.display='none';
+        document.getElementById('end').style.display='block';
+    }
+</script>
+<p id="output"></p>
+
+</div>
+
+<p id="end">ご協力ありがとうございました。</p>
+
+</body>
+</html>
+
+

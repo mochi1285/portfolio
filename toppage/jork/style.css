@@ -1,0 +1,37 @@
+.popup {
+    display: none; /* 初期状態では非表示 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    width: 300px;
+}
+#flag{
+    display: none;
+}
+.popup button {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#imageContainer {
+    display: block; /* 確認用 */
+}
+.popup button:hover {
+    background-color: #ff4444;
+}
+#end{
+    font-size: 30px;
+    color: #ff4444;
+    display: none;
+}
