@@ -1,0 +1,480 @@
+body{
+  color: #7F5539;
+}
+
+header{
+    background-color: #EDE0D4;
+}
+.bodyM{
+    background-color: #B392AC;
+}
+.bodyI{
+  background-color: #EDE0D4;
+}
+.bodyT{
+  font-size: 20px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    background-color: #D9D9D9;
+    border: 1px solid #000000;
+}
+.formS{
+    width: 30%;
+    margin-top: 30px;
+    margin-left: 780px;
+}
+.backWhite{
+
+    border: 2px solid #000000;
+    background-color: white;  
+    width: 100%;
+    padding: 4px 8px;
+    }
+ 
+.test{
+    display: flex;
+    justify-content: space-around;
+    background-color: #EDE0D4;
+    color: #000000;
+    text-align: center;
+    z-index: 99;
+}
+.flexH{
+    display: flex;
+    justify-content: flex-end;
+}
+.testT{
+    display: flex;
+    justify-content: flex-end;
+}
+/* メニューアイコン（三本線）の上と下の線を疑似要素で追加 */
+.gMenu .menuIcon .navicon::before,
+.gMenu .menuIcon .navicon::after {
+  background-color:#7F5539;  /* 色は自由に変更可能です */
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .4s ease-out; /* 形が変わる時のアニメーション */
+  width: 100%;
+}
+.gMenu .menuIcon .navicon::before {top: 10px;} /* 位置を上にずらしています */
+.gMenu .menuIcon .navicon::after {top: -10px;} /* 位置を下にずらしています */
+/* 表示されるメニューです */
+.gMenu .menu {
+
+  overflow: hidden;
+  max-height: 0; /* ★最初は高さを0にして非表示状態に */
+  transition: max-height .6s; /* 表示されるときのアニメーション */
+  text-align: center;
+  z-index: 100;
+}
+/* メニュー部分のデザインです */
+
+.gMenu .menu li a {
+
+  padding: 24px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.gMenu .menu li a:hover {
+  
+  background-color:  #B392AC;
+  width: 100%;
+
+}
+/* ▼▼▼以下はチェックボックスがONの時の状態です▼▼▼ */
+.menuBtn{
+    display: none;
+}
+.gMenu .menuBtn:checked ~ .menu {
+  max-height: 338px; /* ★チェックボックスがオンの時高さを338pxにして表示させます */
+  transition: max-height .6s;
+}
+/* メニューボタンの中央の線を非表示に */
+.gMenu .menuBtn:checked ~ .menuIcon .navicon {background: transparent;}
+
+/* メニューボタンの上下の線を45度傾けて✕印を作ります */
+.gMenu .menuBtn:checked ~ .menuIcon .navicon::before {transform: rotate(-45deg);top: 0;}
+.gMenu .menuBtn:checked ~ .menuIcon .navicon::after {transform: rotate(45deg);top: 0;}
+/* サイトに合わせてオリジナルカスタマイズ */
+
+.gMenu .menuIcon .navicon::before,
+
+.gMenu {
+      z-index: 99;
+}
+
+.gMenu .menuIcon {
+  cursor: pointer;
+  right: 10px;
+  top: 12px;
+  padding-top: 5px;
+  height: 12px;
+}
+.gMenu .menuIcon .navicon {
+
+  display: block;
+  height: 2px;
+  width: 31px;
+  position: relative;
+  transition: background .4s ease-out;
+}
+.gMenu .menuIcon .navicon::before,
+.gMenu .menuIcon .navicon::after {
+ 
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .4s ease-out;
+  width: 100%;
+}
+.gMenu .menuIcon .navicon::before {top: 10px;}
+.gMenu .menuIcon .navicon::after {top: -10px;}
+
+.gMenu .menu li:first-of-type {
+  padding-top: 50px;
+}
+.gMenu .menu li a {
+ 
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+.gMenu .menuBtn:checked ~ .menu {
+  max-height: 338px;
+  transition: max-height .6s;
+}
+
+
+.navicon {
+    margin-top: 15px;
+    width: 30px; /* 幅を設定 */
+    height: 3px; /* 高さを設定 */
+    background-color:#7F5539; 
+
+    transition: background-color 0.3s; /* アニメーションを追加 */
+}
+
+
+.gMenu .menuIcon .navicon::before {
+    top: 10px; /* 上側の線の位置 */
+   
+  }
+.navMenu{
+  display: flex;
+  justify-content: start;
+  margin-left: 200px;
+}
+.linL{
+  margin-right: 50px;
+
+  border-left: 2px solid #B392AC;
+  padding-left: 20px;
+}
+.fMeinRogo{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.snsIcon{
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+}
+
+.snsRogo{
+ padding-right: 50px;
+}
+
+.gazoYoko{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
+}
+.gazoCenter{
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+}
+footer{
+  text-align: center;
+  border-top: 1px solid #000000;
+  padding: 20px;
+}
+.gazoR{
+margin-right: 80px;
+}
+.ninki{
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+.rank{
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #FFD233;
+  display: inline-block;
+
+}
+.rank123{
+display: flex;
+justify-content: space-around;
+margin-top: 100px;
+}
+.one{
+  text-align: center;
+  color: white;
+  background-color: #FFD233;
+  padding: 20px;
+
+}
+.two{
+  text-align: center;
+  color: white;
+  background-color: #cccccc;
+  padding: 20px;
+
+}
+.three{
+  text-align: center;
+  color: white;
+  background-color: #D27C2C;
+  padding: 20px;
+
+}
+.gazoo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* 均等配置 */
+  gap: 10px; /* アイテム間の余白 */
+}
+
+.supe{
+  padding-top: 20px;
+}
+.red{
+  color: #BF0000;
+  margin-top: 10px;
+}
+.red2{
+  color: #BF0000;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+.cartSei{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.cartire{
+  background-color: #7F5539;
+  width: 250px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 100px;
+  color: white;
+  text-align: center;
+}
+
+.cartire2{
+  background-color: #7F5539;
+  width: 200px;
+  color: white;
+  display: flex;
+  padding: auto;
+  align-items: center;
+  font-weight: normal;
+}
+
+
+.kyousu{
+  background-color: #B392AC;
+  color: white;
+  padding: 20px;
+}
+.yokonarabi{
+  display: flex;
+  justify-content: center;
+}
+
+.navpro{
+border-bottom:1px  solid #000000;
+padding-bottom: 5px;
+padding-top: 5px;
+padding-left: 100px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  position: relative;
+}
+.saikeisan{
+  background-color: #D9D9D9;
+}
+.item {
+  /*わかりやすくするため別で記載何個目で折り返すか指定している*/
+  width: calc(33% - 10px); /* 3列（PC版）: 幅33% - 余白 */
+  max-width: 360px; /* 最大幅を360pxに制限 */
+  box-sizing: border-box; /* 余白を含めて計算 */
+}
+
+
+.textC {
+  margin-top: 100px;
+  margin-bottom: 100px;
+text-align: center;
+}
+.tyousei{
+display: flex;
+margin-left: 300px;
+}
+.tester{
+  display: flex;
+  justify-content: space-around;
+ 
+}
+
+tester2{
+position: relative;
+
+}
+
+.yokoyoko{
+  display: flex;
+  align-items: flex-start;
+
+}
+
+
+.textBox {
+  width: 70px;
+  padding: 10px;
+  border: 1px solid #000;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.productInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* 画像とテキストの間隔 */
+  font-weight: bold;
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  .tyousei{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  bodyT{
+    font-size: 12px;
+  }
+  .navpro{
+    padding-left: 20px;
+    }
+
+  .red{
+    padding-top: 20px;
+  }
+  .navMenu {
+    
+    display: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  .linL{ 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  .fMeinRogo{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 50px;
+    left: 250px;
+    }
+
+
+.snsIcon{
+    position: relative;
+    bottom: 230px;
+    right: 80px;
+}
+footer{
+  position: relative;
+  bottom: 150px;
+}
+.snsRogo{
+  padding-right: 30px;
+}
+.bodyM{
+  background-color: #EDE0D4;
+}
+.formS{
+  width: 30%;
+  margin-top: 30px;
+  margin-left:20px;
+  width: 90%;
+}
+.gazoYoko{
+  display: flex;
+  margin-top: 10px;
+
+}
+
+.twoBox{
+  display: flex;
+  width: 155px;
+  flex-wrap: wrap;
+}
+
+
+.textInfo {
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
+
+}
+
+.item {
+
+  width: calc(50% - 10px); /* 3列（PC版）: 幅33% - 余白 */
+  max-width: 360px; /* 最大幅を360pxに制限 */
+  box-sizing: border-box; /* 余白を含めて計算 */
+}
+
+.cartire{
+  width: 140px;
+}
+.one,
+.two,
+.three,
+.kyousu {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+}
+
+
+
